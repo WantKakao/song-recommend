@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import recommendations from "./assets/recommendations"; // 데이터 가져오기
+import './index.css';
 
 function App() {
   const [step, setStep] = useState(1);
@@ -14,20 +15,20 @@ function App() {
 
   return (
 
-    <div className="flex flex-col items-center justify-center min-h-screen bg-blue-100">
+    <div className="flex items-center justify-center w-full h-full">
       {step === 1 && (
-        <div className="text-center">
+        <div className="text-center w-full max-w-lg px-4 py-6">
           <h1 className="text-2xl font-bold mb-6">당신은 오늘 점심을 드셨습니까?</h1>
           <div className="flex gap-4 justify-center">
             <button
               onClick={handleNextStep}
-              className="px-6 py-3 bg-green-400 hover:bg-green-500 text-white rounded-xl transition"
+              className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-white rounded-xl transition"
             >
               네
             </button>
-            <button
+            <button 
               onClick={handleNextStep}
-              className="px-6 py-3 bg-red-400 hover:bg-red-500 text-white rounded-xl transition"
+              className="px-6 py-3 bg-purple-400 hover:bg-purple-500 text-white rounded-xl transition"
             >
               아니오
             </button>
