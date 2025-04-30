@@ -8,7 +8,6 @@ function App() {
   const handleNextStep = (choice) => {
     if (choice) {   // choice가 있으면, setAnswer로 상태 업데이트
       setAnswer(choice);
-      console.log(choice);
     };
     setStep((current_step) => current_step + 1);
   };
